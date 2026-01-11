@@ -15,7 +15,7 @@ export default function Footer() {
           
           {/* Left section */}
           <div>
-            <img src="/logo.svg" alt="logo" className="h-8" />
+            <img src="/thumbifyai-logo.svg" alt="logo" className="h-9" />
             <p className="max-w-[410px] mt-6 text-sm leading-relaxed">
               ThumbnailAI helps creators generate high-click YouTube thumbnails using AI. 
               Save time, stand out in feeds, and grow your channel faster.

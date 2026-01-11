@@ -1,20 +1,25 @@
 import { useRef } from 'react'
-import Title from './Title'
 import { motion } from 'framer-motion'
+import {
+  Sparkles,
+  Eye,
+  SlidersHorizontal
+} from 'lucide-react'
+import Title from './Title'
 
 const featuresData = [
   {
-    icon: '⚡',
+    icon: Sparkles,
     title: 'Smart Analysis',
     desc: 'Our AI analyzes your video content to suggest the most clickable thumbnail ideas.'
   },
   {
-    icon: '👍',
+    icon: Eye,
     title: 'Eye-Catching Designs',
     desc: 'Generate vibrant, high-contrast thumbnails that stand out in crowded feeds.'
   },
   {
-    icon: '⭕',
+    icon: SlidersHorizontal,
     title: 'Fully Editable',
     desc: 'Get layered designs that you can tweak, customize, and perfect anytime.'
   }
@@ -34,34 +39,39 @@ export default function Features() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {featuresData.map((feature, i) => (
-            <motion.div
-              key={i}
-              ref={(el) => (refs.current[i] = el)}
-              initial={{ y: 80, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                type: 'spring',
-                stiffness: 260,
-                damping: 60,
-                delay: i * 0.15
-              }}
-              className="rounded-2xl p-6  from-white/5 to-white/2 border border-white/10 hover:border-blue-400/40 transition duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-blue-200/10 flex items-center justify-center mb-4 text-blue-400 text-xl">
-                {feature.icon}
-              </div>
+          {featuresData.map((feature, i) => {
+            const Icon = feature.icon
 
-              <h3 className="text-lg font-semibold mb-2">
-                {feature.title}
-              </h3>
+            return (
+              <motion.div
+                key={i}
+                ref={(el) => (refs.current[i] = el)}
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 260,
+                  damping: 60,
+                  delay: i * 0.15
+                }}
+                className="rounded-2xl p-6 bg-white/5 backdrop-blur border border-white/10 hover:border-indigo-400/40 transition duration-300"
+              >
+                {/* Icon */}
+                <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4">
+                  <Icon className="text-indigo-400" size={22} />
+                </div>
 
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {feature.desc}
-              </p>
-            </motion.div>
-          ))}
+                <h3 className="text-lg font-semibold mb-2">
+                  {feature.title}
+                </h3>
+
+                <p className="text-gray-300 text-sm leading-relaxed text-left sm:text-justify">
+                  {feature.desc}
+                </p>
+              </motion.div>
+            )
+          })}
         </div>
 
       </div>

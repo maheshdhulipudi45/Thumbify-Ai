@@ -1,11 +1,12 @@
 import Hero from "../components/Hero";
 import Features from "../components/Features";
 import Pricing from "../components/Pricing";
-// import Faq from "../components/Faq";
+import Faq from "../components/Faq";
 import CTA from "../components/CTA";
-import About from '../pages/About';
-import Community from '../pages/Community';
-import Generate from "../pages/Generate";
+import TestimonialsMarquee from "../components/Testimonial";
+// import About from '../pages/About';
+// import Community from '../pages/Community';
+// import Generate from "../pages/Generate";
 export default function Home() {
     return (
         <>
@@ -13,10 +14,12 @@ export default function Home() {
             <Features />
             <Pricing />
             {/* <Faq /> */}
-            <CTA />
-            <About/>
+           
+            <TestimonialsMarquee/>
+            <CTA/>
+            {/* <About/>
             <Community/>
-            <Generate/>
+            <Generate/> */}
             
         </>
     )

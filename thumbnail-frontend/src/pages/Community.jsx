@@ -10,7 +10,7 @@ import {
 
 export default function Community() {
   return (
-    <section className="py-20 2xl:py-32 px-4">
+    <section className="py-20 mt-7 2xl:py-32 px-4">
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
@@ -103,7 +103,7 @@ export default function Community() {
               who are serious about results.
             </p>
 
-            <GhostButton className="px-10 py-3 gap-2 border-white/40 hover:border-white hover:bg-white/10">
+            <GhostButton className="px-10 py-3 gap-2   bg-linear-to-r from-pink-500 to-indigo-500 text-white border-white/40 hover:border-white hover:bg-white/10">
               Join the community
               <ArrowRightIcon size={20} />
             </GhostButton>

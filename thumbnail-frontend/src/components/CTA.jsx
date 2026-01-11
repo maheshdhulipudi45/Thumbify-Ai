@@ -1,10 +1,12 @@
 import { ArrowRightIcon } from 'lucide-react'
 import { GhostButton } from './Buttons'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 export default function CTA() {
+  const navigate = useNavigate();
   return (
-    <section className="py-20 2xl:pb-32 px-4">
+    <section className="py-11 2xl:pb-32 px-4">
       <div className="container mx-auto max-w-3xl">
         <div className="rounded-3xl bg-linear-to-b from-indigo-600 to-indigo-800/10 border border-violet-500/20 p-12 md:p-16 text-center relative overflow-hidden">
           
@@ -50,7 +52,8 @@ export default function CTA() {
                 delay: 0.3
               }}
             >
-              <GhostButton className="px-8 py-3 gap-2   bg-linear-to-r from-pink-500 to-indigo-500 text-white border-indigo-400/40 hover:border-indigo-400 hover:bg-indigo-500/10">
+              <GhostButton onClick={()=>navigate("/auth")}
+               className="px-8 py-3 gap-2   bg-linear-to-r from-pink-500 to-indigo-500 text-white border-indigo-400/40 hover:border-indigo-400 hover:bg-indigo-500/10">
                 Generate thumbnails now
                 <ArrowRightIcon size={20} />
               </GhostButton>

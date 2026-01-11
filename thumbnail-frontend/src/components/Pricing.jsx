@@ -50,7 +50,7 @@ export default function Pricing() {
               }`}
             >
               {plan.popular && (
-                <p className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 rounded-md text-xs">
+                <p className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-linear-to-r from-pink-500 to-indigo-500 rounded-md text-xs">
                   Most popular
                 </p>
               )}
@@ -86,11 +86,11 @@ export default function Pricing() {
 
               <div>
                 {plan.popular ? (
-                  <PrimaryButton className="w-full">
+                  <PrimaryButton className="w-full bg-linear-to-r from-pink-500 to-indigo-500 ">
                     Get started
                   </PrimaryButton>
                 ) : (
-                  <GhostButton className="w-full justify-center">
+                  <GhostButton className="w-full justify-center "  >
                     Get started
                   </GhostButton>
                 )}
