@@ -52,7 +52,7 @@ export default function CTA() {
                 delay: 0.3
               }}
             >
-              <GhostButton onClick={()=>navigate("/auth")}
+              <GhostButton onClick={()=>navigate("/generate")}
                className="px-8 py-3 gap-2   bg-linear-to-r from-pink-500 to-indigo-500 text-white border-indigo-400/40 hover:border-indigo-400 hover:bg-indigo-500/10">
                 Generate thumbnails now
                 <ArrowRightIcon size={20} />

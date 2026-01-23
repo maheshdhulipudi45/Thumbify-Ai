@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion'
 import { Sparkles, Rocket, Users, BarChart3 } from 'lucide-react'
 import Title from '../components/Title'
+import { useNavigate } from "react-router-dom";
+
 
 export default function About() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative mt-6 overflow-hidden py-16 sm:py-20 2xl:py-32 px-4 sm:px-6">
 
@@ -176,7 +180,7 @@ export default function About() {
               <p className="text-gray-300 mb-6">
                 Create high-converting thumbnails in minutes.
               </p>
-              <button className="px-8 py-3 rounded-xl  bg-linear-to-r from-pink-500 to-indigo-500 text-white transition font-medium">
+              <button   onClick={()=>navigate("/auth")} className="px-8 py-3 rounded-xl  bg-linear-to-r from-pink-500 to-indigo-500 text-white transition font-medium">
                 Get Started Free
               </button>
             </div>

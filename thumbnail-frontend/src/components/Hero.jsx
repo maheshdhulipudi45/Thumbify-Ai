@@ -29,6 +29,15 @@ export default function Hero() {
   'Growing Channels'
 ];
 
+const handleStartProject = () => {
+  const token = localStorage.getItem("token"); // or user info
+
+  if (token) {
+    navigate("/generate");
+  } else {
+    navigate("/auth");
+  }
+};
 
 
     return (
@@ -92,10 +101,15 @@ export default function Hero() {
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}
                             >
                                 {/* <a href="/" className="w-full sm:w-auto"> */}
-                                    <PrimaryButton onClick={()=> navigate('/auth')} className="max-sm:w-full py-3 px-7">
+                                    {/* <PrimaryButton onClick={()=> navigate('/auth')} className="max-sm:w-full py-3 px-7">
                                         Start your project
                                         <ArrowRightIcon className="size-4" />
-                                    </PrimaryButton>
+                                    </PrimaryButton> */}
+                                    <PrimaryButton onClick={handleStartProject} className="max-sm:w-full py-3 px-7">
+  Start your project
+  <ArrowRightIcon className="size-4" />
+</PrimaryButton>
+
                                 {/* </a> */}
 
                                 <GhostButton className="max-sm:w-full max-sm:justify-center py-3 px-5">

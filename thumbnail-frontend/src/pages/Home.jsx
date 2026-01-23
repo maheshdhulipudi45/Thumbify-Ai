@@ -14,7 +14,7 @@ export default function Home() {
             <Features />
             <Pricing />
             {/* <Faq /> */}
-           
+           {/* mongodb+srv://Thumbify:Thumbify123@cluster0.gmiqmy9.mongodb.net/?appName=Cluster0 */}
             <TestimonialsMarquee/>
             <CTA/>
             {/* <About/>

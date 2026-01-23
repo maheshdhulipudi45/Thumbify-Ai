@@ -7,6 +7,7 @@ import Community from './pages/Community'
 import Generate from "./pages/Generate";
 import Auth from "./pages/Auth";
 import Contact from "./pages/Contact";
+import MyGenerations from "./pages/MyGenearations";
 // import SoftBackdrop from './components/SoftBackdrop';
 // import Footer from './components/Footer';
 // import LenisScroll from './components/lenis';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/generate" element={<Generate />} />
 		  <Route path="/contact" element={<Contact/>}/>
 	      <Route path='/auth' element={<Auth/>}/>
+        <Route path='/mygenerations'element={<MyGenerations/>}/>
 
         </Route>
       </Routes>
